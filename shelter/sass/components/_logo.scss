@@ -1,0 +1,22 @@
+.logo {
+  width: 186px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-name {
+  color: $color-primary;
+  @extend %font-primary;
+  @include font($size: 3.2rem, $height: 3.5rem);
+  letter-spacing: 0.06em;
+}
+
+.logo-text {
+  color: $color-light-text;
+  @extend %font-secondary;
+  @include font($size: 1.3rem, $height: 1.5rem);
+  letter-spacing: 0.1em;
+}
