@@ -405,11 +405,11 @@ section, main, footer, header, article {
   box-sizing: border-box;
 }
 
-.btn, .logo-name, .help-name, .card__name, h2, h1 {
+.btn, .logo-name, .number-card, .addition-bank_name, .help-name, .card__name, h2, h1 {
   font-family: Georgia, Verdana, sans-serif;
 }
 
-.logo-text, .navigation, body {
+.logo-text, .addition-text, .navigation, body {
   font-family: Arial, Verdana, sans-serif;
 }
 
@@ -428,7 +428,6 @@ html {
 }
 
 body {
-  max-width: 1280px;
   margin: auto;
   color: #4C4C4C;
   font-style: normal;
@@ -713,6 +712,82 @@ h2 {
   line-height: 2.3rem;
   letter-spacing: 0.06em;
   color: #545454;
+}
+
+.page-in_addition {
+  background-color: #F6F6F6;
+}
+
+.addition__block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 32px;
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+.addition-img {
+  width: 505px;
+  height: 261px;
+  background-image: url("./assets/images/donation-dog.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.addition-content {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 20px;
+}
+
+.addition-title {
+  width: 300px;
+  text-align: left;
+}
+
+.addition-bank_name {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+  letter-spacing: 0.06em;
+}
+
+.bank-card {
+  width: 349px;
+  background-color: #F1CDB3;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  padding-left: 5px;
+}
+
+.img-card {
+  width: 50px;
+  height: 43px;
+  background-image: url("./assets/icons/icon-bank-card.svg");
+  background-repeat: no-repeat;
+}
+
+.number-card {
+  color: #545454;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  letter-spacing: 0.06em;
+}
+
+.addition-text {
+  color: #B2B2B2;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
 }
 
 .logo {
