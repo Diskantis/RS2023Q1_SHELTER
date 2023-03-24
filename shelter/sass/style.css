@@ -405,7 +405,7 @@ section, main, footer, header, article {
   box-sizing: border-box;
 }
 
-.btn, .logo-name, .card__name, h2, h1 {
+.btn, .logo-name, .help-name, .card__name, h2, h1 {
   font-family: Georgia, Verdana, sans-serif;
 }
 
@@ -615,6 +615,7 @@ h2 {
   background-color: #FAFAFA;
   border-radius: 9px;
   gap: 30px;
+  cursor: pointer;
 }
 .friend__card:hover {
   background-color: #FFFFFF;
@@ -672,6 +673,46 @@ h2 {
 
 .friends__link {
   text-decoration-line: none;
+}
+
+.help__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+.help__title {
+  width: 310px;
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.help__content {
+  width: 1030px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 55px;
+  column-gap: 120px;
+}
+
+.help__card {
+  height: 113px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.help-name {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  letter-spacing: 0.06em;
+  color: #545454;
 }
 
 .logo {
@@ -755,6 +796,48 @@ h2 {
   background-image: url("./assets/icons/arrow.svg");
   background-repeat: no-repeat;
   rotate: 180deg;
+}
+
+.ico_help {
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+}
+
+.food {
+  background-image: url("./assets/icons/icon-pet-food.svg");
+}
+
+.transport {
+  background-image: url("./assets/icons/icon-transportation.svg");
+}
+
+.toys {
+  background-image: url("./assets/icons/icon-toys.svg");
+}
+
+.bowls {
+  background-image: url("./assets/icons/icon-bowls-and-cups.svg");
+}
+
+.shampoos {
+  background-image: url("./assets/icons/icon-shampoos.svg");
+}
+
+.vitamins {
+  background-image: url("./assets/icons/icon-vitamins.svg");
+}
+
+.medicines {
+  background-image: url("./assets/icons/icon-medicines.svg");
+}
+
+.collars {
+  background-image: url("./assets/icons/icon-collars-leashes.svg");
+}
+
+.sleeping {
+  background-image: url("./assets/icons/icon-sleeping-area.svg");
 }
 
 /*# sourceMappingURL=style.css.map */

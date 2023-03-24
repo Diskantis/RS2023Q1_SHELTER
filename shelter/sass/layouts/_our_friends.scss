@@ -13,12 +13,14 @@
 .friends__title {
   text-align: center;
 }
+
 .cards__block {
   display: flex;
   justify-content: space-between;
   align-items: center;
   column-gap: 53px;
 }
+
 .friends__slider {
   display: flex;
   justify-content: space-between;
@@ -26,6 +28,7 @@
   column-gap: 90px;
   padding: 60px 0;
 }
+
 .friend__card {
   width: 270px;
   height: 435px;
@@ -35,6 +38,7 @@
   background-color: $color-nav-text_hover;
   border-radius: 9px;
   gap: 30px;
+  cursor: pointer;
   &:hover {
     background-color: $color-light-text;
     .btn_card {
