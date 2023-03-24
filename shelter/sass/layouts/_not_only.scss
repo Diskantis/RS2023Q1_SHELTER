@@ -1,29 +1,33 @@
-.start__content {
+.not_only__block {
   padding-top: 90px;
   display: flex;
   justify-content: space-between;
   align-items: end;
 }
 
-.start__title {
+.not_only__content {
   width: 460px;
   display: flex;
   flex-direction: column;
   padding-bottom: 243px;
 }
 
-.start__text {
+.not_only__title {
+  width: 310px;
+}
+
+.not_only__text {
   color: $color-nav-text;
   padding-top: 11px;
   padding-bottom: 42px;
 }
 
-.start__link {
+.not_only__link {
   width: 207px;
   text-decoration-line: none;
 }
 
-.start-img {
+.not_only__img {
   width: 698px;
   height: 728px;
   background-image: url("./assets/images/start-screen-puppy.png");

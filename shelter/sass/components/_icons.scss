@@ -1,0 +1,18 @@
+.ico {
+  display: inline-flex;
+}
+
+.ico_arrow_left {
+  width: 14px;
+  height: 6px;
+  background-image: url("./assets/icons/arrow.svg");
+  background-repeat: no-repeat;
+}
+
+.ico_arrow_right {
+  width: 14px;
+  height: 6px;
+  background-image: url("./assets/icons/arrow.svg");
+  background-repeat: no-repeat;
+  rotate: 180deg;
+}

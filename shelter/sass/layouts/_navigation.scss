@@ -17,6 +17,7 @@
   color: $color-nav-text;
   text-decoration-line: none;
   cursor: pointer;
+  @extend %transition;
   &:hover {
     color: $color-nav-text_hover;
     @extend %transition;
