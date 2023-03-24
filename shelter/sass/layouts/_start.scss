@@ -1,0 +1,32 @@
+.start__content {
+  padding-top: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.start__title {
+  width: 460px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 243px;
+}
+
+.start__text {
+  color: $color-nav-text;
+  padding-top: 11px;
+  padding-bottom: 42px;
+}
+
+.start__link {
+  width: 207px;
+  text-decoration-line: none;
+}
+
+.start-img {
+  width: 698px;
+  height: 728px;
+  background-image: url("./assets/images/start-screen-puppy.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
