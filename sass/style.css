@@ -405,11 +405,11 @@ section, main, footer, header, article {
   box-sizing: border-box;
 }
 
-h2, h1 {
+.logo-name, h2, h1 {
   font-family: Georgia, Verdana, sans-serif;
 }
 
-.navigation, body {
+.logo-text, .navigation, body {
   font-family: Arial, Verdana, sans-serif;
 }
 
@@ -492,12 +492,37 @@ h2 {
   padding: 0 0 33px;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
 .logo {
-  width: 184px;
+  width: 186px;
   height: 60px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+}
+
+.logo-name {
+  color: #F1CDB3;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.2rem;
+  line-height: 3.5rem;
+  letter-spacing: 0.06em;
+}
+
+.logo-text {
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.1em;
 }
 
 /*# sourceMappingURL=style.css.map */
