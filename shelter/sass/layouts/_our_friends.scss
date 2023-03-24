@@ -1,0 +1,93 @@
+.page-our_friends {
+  background-color: $color-friends-bg;
+}
+
+.friends__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+.friends__title {
+  text-align: center;
+}
+.cards__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 53px;
+}
+.friends__slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 90px;
+  padding: 60px 0;
+}
+.friend__card {
+  width: 270px;
+  height: 435px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $color-nav-text_hover;
+  border-radius: 9px;
+  gap: 30px;
+  &:hover {
+    background-color: $color-light-text;
+    .btn_card {
+      background-color: $color-btn-bg-hov;
+      border-color: $color-btn-bg-hov;
+    }
+  }
+}
+
+.card__img {
+  width: 270px;
+  height: 270px;
+  background-repeat: no-repeat;
+  border-radius: 9px 9px 0 0;
+}
+.img_katrine {
+  background-image: url("./assets/images/pets-katrine.png");
+}
+
+.img_jennifer {
+  background-image: url("./assets/images/pets-jennifer.png");
+}
+
+.img_woody {
+  background-image: url("./assets/images/pets-woody.png");
+}
+
+.card__name {
+  @extend %font-primary;
+  @include font ($size: 2.0rem, $height: 2.3rem);
+  letter-spacing: 0.06em;
+}
+
+.card__link {
+  text-decoration-line: none;
+}
+
+.arrow_left, .arrow_right{
+  width: 52px;
+  height: 52px;
+  border: 2px solid $color-btn-border;
+  border-radius: 100px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  @extend %transition;
+  &:hover {
+    background-color: $color-btn-bg-hov;
+    border-color: $color-btn-bg-hov;
+  }
+}
+
+.friends__link {
+  text-decoration-line: none;
+}

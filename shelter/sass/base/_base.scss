@@ -17,7 +17,6 @@ body {
 }
 
 h1 {
-  width: 310px;
   color: $color-light-text;
   @extend %font-primary;
   @include font($size: 4.4rem, $height: 5.7rem);
@@ -27,5 +26,6 @@ h2 {
   color: $color-dark-text;
   @extend %font-primary;
   @include font($size: 3.5rem, $height: 4.5rem);
+  letter-spacing: 0.06em;
 }
 
