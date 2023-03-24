@@ -405,7 +405,7 @@ section, main, footer, header, article {
   box-sizing: border-box;
 }
 
-.btn, .logo-name, .number-card, .addition-bank_name, .help-name, .card__name, h2, h1 {
+.btn, .logo-name, .contact_header, .number-card, .addition-bank_name, .help-name, .card__name, h2, h1 {
   font-family: Georgia, Verdana, sans-serif;
 }
 
@@ -788,6 +788,100 @@ h2 {
   font-weight: 400;
   font-size: 1.2rem;
   line-height: 1.8rem;
+}
+
+.contacts__block {
+  display: flex;
+  column-gap: 134px;
+  padding-top: 40px;
+}
+
+.questions__block {
+  width: 305px;
+  height: 234px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.waiting__block {
+  width: 305px;
+  height: 234px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.questions-title {
+  color: #FFFFFF;
+  padding-top: 17px;
+  padding-bottom: 40px;
+}
+
+.waiting-title {
+  color: #FFFFFF;
+  padding-top: 17px;
+  padding-bottom: 40px;
+}
+
+.questions__content, .waiting__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.questions__item {
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+  margin-bottom: 40px;
+}
+
+.waiting__item {
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+  margin-bottom: 40px;
+}
+
+.contact_header {
+  width: 305px;
+  color: #F1CDB3;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  letter-spacing: 0.06em;
+  text-decoration-line: none;
+}
+
+.contact_email {
+  width: 40px;
+  height: 32px;
+  background-image: url("./assets/icons/icon-email.svg");
+  background-repeat: no-repeat;
+}
+
+.contact_phone {
+  width: 40px;
+  height: 32px;
+  background-image: url("./assets/icons/icon-phone.svg");
+  background-repeat: no-repeat;
+}
+
+.contact_location {
+  width: 22px;
+  height: 32px;
+  background-image: url("./assets/icons/icon-marker.svg");
+  background-repeat: no-repeat;
+}
+
+.contacts-img {
+  width: 300px;
+  height: 310px;
+  background-image: url("./assets/images/footer-puppy.png");
+  background-repeat: no-repeat;
+  margin-left: 25px;
 }
 
 .logo {
