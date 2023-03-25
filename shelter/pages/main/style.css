@@ -406,14 +406,14 @@ section, main, footer, header, article {
 }
 
 .btn, .logo-name, .contact_text, .number-card, .addition-bank_name, .help-name, .text_arr, .card__name, h2, h1 {
-  font-family: Georgia, Verdana, sans-serif;
+  font-family: "Georgia", Georgia, sans-serif;
 }
 
 .logo-text, .addition-text, .navigation, body {
-  font-family: Arial, Verdana, sans-serif;
+  font-family: "Arial", Arial, sans-serif;
 }
 
-.btn, .btn_slider, .navigation__link a {
+.btn_slider, .btn, .navigation__link a {
   transition: all 0.3s ease-in;
 }
 
@@ -453,6 +453,24 @@ h2 {
   letter-spacing: 0.06em;
 }
 
+@font-face {
+  font-family: "ArialL";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Arial"), url("../sass/assets/fonts/arial/arial-regular.woff2") format("woff2"), url("../sass/assets/fonts/arial/arial-regular.woff") format("woff"), url("../sass/assets/fonts/arial/arial-regular.ttf") format("ttf");
+}
+@font-face {
+  font-family: "ArialL";
+  font-style: italic;
+  font-weight: 400;
+  src: local("Arial"), url("../sass/assets/fonts/arial/arial-italic.woff2") format("woff2"), url("../sass/assets/fonts/arial/arial-italic.woff") format("woff"), url("../sass/assets/fonts/arial/arial-italic.ttf") format("ttf");
+}
+@font-face {
+  font-family: "GeorgiaL";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Georgia"), url("../sass/assets/fonts/georgia/georgia-regular.woff2") format("woff2"), url("../sass/assets/fonts/georgia/georgia-regular.woff") format("woff"), url("../sass/assets/fonts/georgia/georgia-regular.ttf") format("ttf");
+}
 .wrapper {
   max-width: 1200px;
   margin: auto;
@@ -690,35 +708,6 @@ h2 {
 
 .card__link {
   text-decoration-line: none;
-}
-
-.btn_slider {
-  width: 52px;
-  height: 52px;
-  border: 2px solid #F1CDB3;
-  border-radius: 100px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-.btn_slider:hover {
-  background-color: #FDDCC4;
-  border-color: #FDDCC4;
-}
-.btn_slider.inactive {
-  border-color: #CDCDCD;
-}
-.btn_slider.inactive:hover {
-  background-color: transparent;
-  border-color: #CDCDCD;
-}
-.btn_slider.active {
-  background-color: #F1CDB3;
-}
-.btn_slider.active:hover {
-  background-color: #F1CDB3;
-  border-color: #F1CDB3;
 }
 
 .text_arr {
@@ -1005,6 +994,35 @@ h2 {
 }
 .btn_card {
   text-align: center;
+}
+
+.btn_slider {
+  width: 52px;
+  height: 52px;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.btn_slider:hover {
+  background-color: #FDDCC4;
+  border-color: #FDDCC4;
+}
+.btn_slider.inactive {
+  border-color: #CDCDCD;
+}
+.btn_slider.inactive:hover {
+  background-color: transparent;
+  border-color: #CDCDCD;
+}
+.btn_slider.active {
+  background-color: #F1CDB3;
+}
+.btn_slider.active:hover {
+  background-color: #F1CDB3;
+  border-color: #F1CDB3;
 }
 
 .ico {
