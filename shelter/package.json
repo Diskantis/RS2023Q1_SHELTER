@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "style": "sass --watch sass/style.scss sass/style.css",
+    "styleMain": "sass --watch pages/main/style.scss pages/main/style.css",
+    "stylePets": "sass --watch pages/pets/style.scss pages/pets/style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

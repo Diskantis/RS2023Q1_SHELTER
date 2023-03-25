@@ -5,6 +5,8 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
+  text-decoration-line: none;
 }
 
 .logo-name {
@@ -12,6 +14,9 @@
   @extend %font-primary;
   @include font($size: 3.2rem, $height: 3.5rem);
   letter-spacing: 0.06em;
+  &.pets {
+    color: $color-dark-text;
+  }
 }
 
 .logo-text {
@@ -19,4 +24,7 @@
   @extend %font-secondary;
   @include font($size: 1.3rem, $height: 1.5rem);
   letter-spacing: 0.1em;
+  &.pets {
+    color: $color-dark-btn-text;
+  }
 }

@@ -405,7 +405,7 @@ section, main, footer, header, article {
   box-sizing: border-box;
 }
 
-.btn, .logo-name, .contact_header, .number-card, .addition-bank_name, .help-name, .card__name, h2, h1 {
+.btn, .logo-name, .contact_text, .number-card, .addition-bank_name, .help-name, .text_arr, .card__name, h2, h1 {
   font-family: Georgia, Verdana, sans-serif;
 }
 
@@ -413,7 +413,7 @@ section, main, footer, header, article {
   font-family: Arial, Verdana, sans-serif;
 }
 
-.btn, .arrow_left, .arrow_right, .navigation__link a:hover, .navigation__link a {
+.btn, .btn_slider, .navigation__link a {
   transition: all 0.3s ease-in;
 }
 
@@ -459,7 +459,7 @@ h2 {
 }
 
 .background-header-not_only {
-  background-image: url("./assets/images/start-screen-gradient-background.png");
+  background-image: url("../../sass/assets/images/start-screen-gradient-background.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -468,6 +468,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .header__navigation {
@@ -500,12 +501,23 @@ h2 {
   color: #FAFAFA;
 }
 
+.navigation__link a.pets {
+  color: #545454;
+}
+.navigation__link a.pets:hover {
+  color: #292929;
+}
+
+.navigation__link a.pets.active {
+  color: #545454;
+}
+
 .navigation__link.active {
   border-bottom: 3px solid #F1CDB3;
 }
 
 .not_only__block {
-  padding-top: 90px;
+  padding-top: 60px;
   display: flex;
   justify-content: space-between;
   align-items: end;
@@ -536,7 +548,7 @@ h2 {
 .not_only__img {
   width: 698px;
   height: 728px;
-  background-image: url("./assets/images/start-screen-puppy.png");
+  background-image: url("../../sass/assets/images/start-screen-puppy.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -557,7 +569,7 @@ h2 {
 .about-img {
   width: 300px;
   height: 408px;
-  background-image: url("./assets/images/about-pets.png");
+  background-image: url("../../sass/assets/images/about-pets.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -599,10 +611,15 @@ h2 {
 
 .friends__slider {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   column-gap: 90px;
   padding: 60px 0;
+}
+.friends__slider.pets {
+  row-gap: 30px;
+  column-gap: 40px;
 }
 
 .friend__card {
@@ -632,15 +649,35 @@ h2 {
 }
 
 .img_katrine {
-  background-image: url("./assets/images/pets-katrine.png");
+  background-image: url("../../sass/assets/images/pets-katrine.png");
 }
 
 .img_jennifer {
-  background-image: url("./assets/images/pets-jennifer.png");
+  background-image: url("../../sass/assets/images/pets-jennifer.png");
 }
 
 .img_woody {
-  background-image: url("./assets/images/pets-woody.png");
+  background-image: url("../../sass/assets/images/pets-woody.png");
+}
+
+.img_sophia {
+  background-image: url("../../sass/assets/images/pets-sophia.png");
+}
+
+.img_timmy {
+  background-image: url("../../sass/assets/images/pets-timmy.png");
+}
+
+.img_charly {
+  background-image: url("../../sass/assets/images/pets-charly.png");
+}
+
+.img_scarlett {
+  background-image: url("../../sass/assets/images/pets-scarlett.png");
+}
+
+.img_freddie {
+  background-image: url("../../sass/assets/images/pets-freddie.png");
 }
 
 .card__name {
@@ -655,7 +692,7 @@ h2 {
   text-decoration-line: none;
 }
 
-.arrow_left, .arrow_right {
+.btn_slider {
   width: 52px;
   height: 52px;
   border: 2px solid #F1CDB3;
@@ -665,9 +702,40 @@ h2 {
   align-items: center;
   cursor: pointer;
 }
-.arrow_left:hover, .arrow_right:hover {
+.btn_slider:hover {
   background-color: #FDDCC4;
   border-color: #FDDCC4;
+}
+.btn_slider.inactive {
+  border-color: #CDCDCD;
+}
+.btn_slider.inactive:hover {
+  background-color: transparent;
+  border-color: #CDCDCD;
+}
+.btn_slider.active {
+  background-color: #F1CDB3;
+}
+.btn_slider.active:hover {
+  background-color: #F1CDB3;
+  border-color: #F1CDB3;
+}
+
+.text_arr {
+  color: #292929;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  letter-spacing: 0.06em;
+}
+.text_arr.inactive {
+  color: #CDCDCD;
+}
+
+.slider-manage {
+  display: flex;
+  column-gap: 20px;
 }
 
 .friends__link {
@@ -730,7 +798,7 @@ h2 {
 .addition-img {
   width: 505px;
   height: 261px;
-  background-image: url("./assets/images/donation-dog.png");
+  background-image: url("../../sass/assets/images/donation-dog.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -764,12 +832,13 @@ h2 {
   align-items: center;
   column-gap: 5px;
   padding-left: 5px;
+  text-decoration-line: none;
 }
 
 .img-card {
   width: 50px;
   height: 43px;
-  background-image: url("./assets/icons/icon-bank-card.svg");
+  background-image: url("../../sass/assets/icons/icon-bank-card.svg");
   background-repeat: no-repeat;
 }
 
@@ -835,6 +904,7 @@ h2 {
   align-items: center;
   padding-left: 60px;
   margin-bottom: 40px;
+  cursor: pointer;
 }
 
 .waiting__item {
@@ -842,9 +912,10 @@ h2 {
   align-items: center;
   padding-left: 40px;
   margin-bottom: 40px;
+  cursor: pointer;
 }
 
-.contact_header {
+.contact_text {
   width: 305px;
   color: #F1CDB3;
   font-style: normal;
@@ -855,31 +926,10 @@ h2 {
   text-decoration-line: none;
 }
 
-.contact_email {
-  width: 40px;
-  height: 32px;
-  background-image: url("./assets/icons/icon-email.svg");
-  background-repeat: no-repeat;
-}
-
-.contact_phone {
-  width: 40px;
-  height: 32px;
-  background-image: url("./assets/icons/icon-phone.svg");
-  background-repeat: no-repeat;
-}
-
-.contact_location {
-  width: 22px;
-  height: 32px;
-  background-image: url("./assets/icons/icon-marker.svg");
-  background-repeat: no-repeat;
-}
-
 .contacts-img {
   width: 300px;
   height: 310px;
-  background-image: url("./assets/images/footer-puppy.png");
+  background-image: url("../../sass/assets/images/footer-puppy.png");
   background-repeat: no-repeat;
   margin-left: 25px;
 }
@@ -891,6 +941,8 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
+  text-decoration-line: none;
 }
 
 .logo-name {
@@ -901,6 +953,9 @@ h2 {
   line-height: 3.5rem;
   letter-spacing: 0.06em;
 }
+.logo-name.pets {
+  color: #545454;
+}
 
 .logo-text {
   color: #FFFFFF;
@@ -909,6 +964,9 @@ h2 {
   font-size: 1.3rem;
   line-height: 1.5rem;
   letter-spacing: 0.1em;
+}
+.logo-text.pets {
+  color: #292929;
 }
 
 .btn {
@@ -955,14 +1013,14 @@ h2 {
 .ico_arrow_left {
   width: 14px;
   height: 6px;
-  background-image: url("./assets/icons/arrow.svg");
+  background-image: url("../../sass/assets/icons/arrow.svg");
   background-repeat: no-repeat;
 }
 
 .ico_arrow_right {
   width: 14px;
   height: 6px;
-  background-image: url("./assets/icons/arrow.svg");
+  background-image: url("../../sass/assets/icons/arrow.svg");
   background-repeat: no-repeat;
   rotate: 180deg;
 }
@@ -974,39 +1032,60 @@ h2 {
 }
 
 .food {
-  background-image: url("./assets/icons/icon-pet-food.svg");
+  background-image: url("../../sass/assets/icons/icon-pet-food.svg");
 }
 
 .transport {
-  background-image: url("./assets/icons/icon-transportation.svg");
+  background-image: url("../../sass/assets/icons/icon-transportation.svg");
 }
 
 .toys {
-  background-image: url("./assets/icons/icon-toys.svg");
+  background-image: url("../../sass/assets/icons/icon-toys.svg");
 }
 
 .bowls {
-  background-image: url("./assets/icons/icon-bowls-and-cups.svg");
+  background-image: url("../../sass/assets/icons/icon-bowls-and-cups.svg");
 }
 
 .shampoos {
-  background-image: url("./assets/icons/icon-shampoos.svg");
+  background-image: url("../../sass/assets/icons/icon-shampoos.svg");
 }
 
 .vitamins {
-  background-image: url("./assets/icons/icon-vitamins.svg");
+  background-image: url("../../sass/assets/icons/icon-vitamins.svg");
 }
 
 .medicines {
-  background-image: url("./assets/icons/icon-medicines.svg");
+  background-image: url("../../sass/assets/icons/icon-medicines.svg");
 }
 
 .collars {
-  background-image: url("./assets/icons/icon-collars-leashes.svg");
+  background-image: url("../../sass/assets/icons/icon-collars-leashes.svg");
 }
 
 .sleeping {
-  background-image: url("./assets/icons/icon-sleeping-area.svg");
+  background-image: url("../../sass/assets/icons/icon-sleeping-area.svg");
+}
+
+.icon_contact {
+  width: 40px;
+  height: 32px;
+  background-repeat: no-repeat;
+}
+
+.email {
+  background-image: url("../../sass/assets/icons/icon-email.svg");
+}
+
+.phone {
+  background-image: url("../../sass/assets/icons/icon-phone.svg");
+}
+
+.contact_location {
+  width: 22px;
+  height: 32px;
+  background-image: url("../../sass/assets/icons/icon-marker.svg");
+  background-repeat: no-repeat;
 }
 
 /*# sourceMappingURL=style.css.map */

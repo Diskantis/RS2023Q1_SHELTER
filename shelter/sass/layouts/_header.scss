@@ -1,5 +1,5 @@
 .background-header-not_only {
-  background-image: url("./assets/images/start-screen-gradient-background.png");
+  background-image: url("../../sass/assets/images/start-screen-gradient-background.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -8,4 +8,5 @@
   display: flex;
   justify-content: space-between;
   padding-top: 30px;
+  padding-bottom: 30px;
 }
