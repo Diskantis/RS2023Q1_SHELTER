@@ -14,7 +14,7 @@
 .addition-img {
   width: 505px;
   height: 261px;
-  background-image: url("./assets/images/donation-dog.png");
+  background-image: url("../../sass/assets/images/donation-dog.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -46,12 +46,13 @@
   align-items: center;
   column-gap: 5px;
   padding-left: 5px;
+  text-decoration-line: none;
 }
 
 .img-card {
   width: 50px;
   height: 43px;
-  background-image: url("./assets/icons/icon-bank-card.svg");
+  background-image: url("../../sass/assets/icons/icon-bank-card.svg");
   background-repeat: no-repeat;
 }
 

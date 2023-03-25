@@ -5,20 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shelter</title>
-    <link rel="icon" href="sass/assets/favicon/start-screen-puppy.ico" sizes="any">
-    <link rel="stylesheet" href="sass/style.css">
+    <link rel="icon" href="../../sass/assets/favicon/start-screen-puppy.ico" sizes="any">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="background-header-not_only">
     <header class="header wrapper">
-        <div class="logo">
+        <a href="#" class="logo">
             <span class="logo-name">Cozy House</span>
             <span class="logo-text">Shelter for pets in Boston</span>
-        </div>
+        </a>
         <nav class="header__navigation">
             <ul class="navigation">
                 <li class="navigation__link active"><a href="#anchor-1" class="active">About the shelter</a></li>
-                <li class="navigation__link"><a href="#anchor-2">Our pets</a></li>
+                <li class="navigation__link"><a href="../pets/index.html">Our pets</a></li>
                 <li class="navigation__link"><a href="#anchor-3">Help the shelter</a></li>
                 <li class="navigation__link"><a href="#anchor-4">Contacts</a></li>
             </ul>
@@ -59,29 +59,29 @@
                     <h2 class="friends__title">Our friends who</h2>
                     <h2 class="friends__title">are looking for a house</h2>
                     <div class="cards__block">
-                        <div class="arrow_left"><span class="ico ico_arrow_left"></span></div>
+                        <div class="btn_slider"><span class="ico ico_arrow_left"></span></div>
                         <div class="friends__slider">
                             <div class="friend__card">
                                 <div class="card__img img_katrine"></div>
                                 <span class="card__name">Katrine</span>
-                                <a class="card__link" href="#"><div class="btn btn_card">Learn more</div></a>
+                                <a class="card__link"><div class="btn btn_card">Learn more</div></a>
                             </div>
 
                             <div class="friend__card">
                                 <div class="card__img img_jennifer"></div>
                                 <span class="card__name">Jennifer</span>
-                                <a class="card__link" href="#"><div class="btn btn_card">Learn more</div></a>
+                                <a class="card__link"><div class="btn btn_card">Learn more</div></a>
                             </div>
 
                             <div class="friend__card">
                                 <div class="card__img img_woody"></div>
                                 <span class="card__name">Woody</span>
-                                <a class="card__link" href="#"><div class="btn btn_card">Learn more</div></a>
+                                <a class="card__link"><div class="btn btn_card">Learn more</div></a>
                             </div>
                         </div>
-                        <div class="arrow_right"><span class="ico ico_arrow_right"></span></div>
+                        <div class="btn_slider"><span class="ico ico_arrow_right"></span></div>
                     </div>
-                    <a class="friends__link" href="#anchor-2"><div class="btn btn_friends">Get to know the rest</div></a>
+                    <a class="friends__link" href="../pets/index.html"><div class="btn btn_friends">Get to know the rest</div></a>
                 </div>
             </div>
         </section>
@@ -143,10 +143,10 @@
                     <div class="addition-content">
                         <h2 class="addition-title">You can also make a donation</h2>
                         <span class="addition-bank_name">Name of the bank / Type of bank account</span>
-                        <div class="bank-card">
+                        <a href="#" class="bank-card">
                             <span class="img-card"></span>
                             <span class="number-card">8380 2880 8028 8791 7435</span>
-                        </div>
+                        </a>
                         <p class="addition-text">Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a
                             ipsum at libero sagittis dignissim sed ac diam. Praesent ultrices maximus tortor et
                             vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
@@ -162,15 +162,15 @@
                 <div class="questions__block">
                     <h2 class="questions-title">For questions and suggestions</h2>
                     <ul class="questions__content">
-                        <li class="questions__item contact_email"><a class="contact_header" href="mailto:email@shelter.com" target="_blank">email@shelter.com</a></li>
-                        <li class="questions__item contact_phone"><a class="contact_header" href="tel:+136745677554" target="_blank">+13&nbsp;674&nbsp;567&nbsp;75&nbsp;54</a></li>
+                        <li><a class="questions__item icon_contact email contact_text" href="mailto:email@shelter.com" target="_blank">email@shelter.com</a></li>
+                        <li><a class="questions__item icon_contact phone contact_text" href="tel:+136745677554" target="_blank">+13&nbsp;674&nbsp;567&nbsp;75&nbsp;54</a></li>
                     </ul>
                 </div>
                 <div class="waiting__block">
                     <h2 class="waiting-title">We are waiting for your visit</h2>
                     <ul class="waiting__content">
-                        <li class="waiting__item contact_location"><a class="contact_header" href="https://www.google.com/maps/@53.88464,27.5933684,11z" target="_blank">1&nbsp;Central&nbsp;Street,&nbsp;Boston (entrance&nbsp;from&nbsp;the&nbsp;store)</a></li>
-                        <li class="waiting__item contact_location"><a class="contact_header" href="https://www.google.com/maps/@53.88464,27.5933684,11z" target="_blank">18&nbsp;South&nbsp;Park,&nbsp;London</a></li>
+                        <li><a class="waiting__item contact_location contact_text" href="https://www.google.com/maps/@42.3309922,-71.1308377,13z" target="_blank">1&nbsp;Central&nbsp;Street,&nbsp;Boston (entrance&nbsp;from&nbsp;the&nbsp;store)</a></li>
+                        <li><a class="waiting__item contact_location contact_text" href="https://www.google.com/maps/@51.466769,-0.2549221,11z" target="_blank">18&nbsp;South&nbsp;Park,&nbsp;London</a></li>
                     </ul>
                 </div>
                 <div class="contacts-img"></div>
@@ -178,5 +178,6 @@
         </div>
     </footer>
 </div>
+<script src="index.js"></script>
 </body>
 </html>

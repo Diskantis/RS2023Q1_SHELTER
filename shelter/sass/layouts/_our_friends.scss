@@ -23,10 +23,15 @@
 
 .friends__slider {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   column-gap: 90px;
   padding: 60px 0;
+  &.pets{
+    row-gap: 30px;
+    column-gap: 40px;
+  }
 }
 
 .friend__card {
@@ -55,15 +60,35 @@
   border-radius: 9px 9px 0 0;
 }
 .img_katrine {
-  background-image: url("./assets/images/pets-katrine.png");
+  background-image: url("../../sass/assets/images/pets-katrine.png");
 }
 
 .img_jennifer {
-  background-image: url("./assets/images/pets-jennifer.png");
+  background-image: url("../../sass/assets/images/pets-jennifer.png");
 }
 
 .img_woody {
-  background-image: url("./assets/images/pets-woody.png");
+  background-image: url("../../sass/assets/images/pets-woody.png");
+}
+
+.img_sophia {
+  background-image: url("../../sass/assets/images/pets-sophia.png");
+}
+
+.img_timmy {
+  background-image: url("../../sass/assets/images/pets-timmy.png");
+}
+
+.img_charly {
+  background-image: url("../../sass/assets/images/pets-charly.png");
+}
+
+.img_scarlett {
+  background-image: url("../../sass/assets/images/pets-scarlett.png");
+}
+
+.img_freddie {
+  background-image: url("../../sass/assets/images/pets-freddie.png");
 }
 
 .card__name {
@@ -76,7 +101,7 @@
   text-decoration-line: none;
 }
 
-.arrow_left, .arrow_right{
+.btn_slider {
   width: 52px;
   height: 52px;
   border: 2px solid $color-btn-border;
@@ -90,6 +115,35 @@
     background-color: $color-btn-bg-hov;
     border-color: $color-btn-bg-hov;
   }
+  &.inactive {
+    border-color: $color-nav-text;
+    &:hover {
+      background-color: transparent;
+      border-color: $color-nav-text;
+    }
+  }
+  &.active {
+    background-color: $color-btn-border;
+    &:hover {
+      background-color: $color-btn-border;
+      border-color: $color-btn-border;
+    }
+  }
+}
+
+.text_arr {
+  color: $color-dark-btn-text;
+  @extend %font-primary;
+  @include font ($size: 2.0rem, $height: 2.3rem);
+  letter-spacing: 0.06em;
+  &.inactive {
+    color: $color-nav-text;
+  }
+}
+
+.slider-manage {
+  display: flex;
+  column-gap: 20px;
 }
 
 .friends__link {

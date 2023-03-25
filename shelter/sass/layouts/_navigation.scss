@@ -20,12 +20,22 @@
   @extend %transition;
   &:hover {
     color: $color-nav-text_hover;
-    @extend %transition;
   }
 }
 
 .navigation__link a.active {
-    color: $color-nav-text_hover;
+  color: $color-nav-text_hover;
+}
+
+.navigation__link a.pets {
+  color: $color-dark-text;
+  &:hover {
+    color: $color-dark-btn-text;
+  }
+}
+
+.navigation__link a.pets.active {
+  color: $color-dark-text;
 }
 
 .navigation__link.active {
