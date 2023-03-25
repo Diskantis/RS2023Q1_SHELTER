@@ -34,6 +34,34 @@
   }
 }
 
-
+.btn_slider {
+  width: 52px;
+  height: 52px;
+  border: 2px solid $color-btn-border;
+  border-radius: 100px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  @extend %transition;
+  &:hover {
+    background-color: $color-btn-bg-hov;
+    border-color: $color-btn-bg-hov;
+  }
+  &.inactive {
+    border-color: $color-nav-text;
+    &:hover {
+      background-color: transparent;
+      border-color: $color-nav-text;
+    }
+  }
+  &.active {
+    background-color: $color-btn-border;
+    &:hover {
+      background-color: $color-btn-border;
+      border-color: $color-btn-border;
+    }
+  }
+}
 
 
