@@ -833,6 +833,7 @@ h2 {
   column-gap: 5px;
   padding-left: 5px;
   text-decoration-line: none;
+  cursor: pointer;
 }
 
 .img-card {
