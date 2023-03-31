@@ -9,4 +9,8 @@
   justify-content: space-between;
   padding-top: 30px;
   padding-bottom: 30px;
+
+  @include media-tablet {
+    padding: 30px 30px;
+  }
 }
