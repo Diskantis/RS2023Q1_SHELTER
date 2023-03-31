@@ -3,6 +3,12 @@
   display: flex;
   justify-content: space-between;
   align-items: end;
+
+  @include media-tablet {
+    padding-top: 0;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .not_only__content {
@@ -10,6 +16,10 @@
   display: flex;
   flex-direction: column;
   padding-bottom: 243px;
+
+  @include media-tablet {
+    padding-bottom: 100px;
+  }
 }
 
 .not_only__title {
@@ -25,6 +35,10 @@
 .not_only__link {
   width: 207px;
   text-decoration-line: none;
+
+  @include media-tablet {
+    align-self: center;
+  }
 }
 
 .not_only__img {
@@ -33,4 +47,10 @@
   background-image: url("../../sass/assets/images/start-screen-puppy.png");
   background-repeat: no-repeat;
   background-size: cover;
+
+  @include media-tablet {
+    width: 569px;
+    height: 593px;
+    align-self: end;
+  }
 }

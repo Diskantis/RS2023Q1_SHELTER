@@ -475,6 +475,11 @@ h2 {
   max-width: 1200px;
   margin: auto;
 }
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0 30px;
+  }
+}
 
 .background-header-not_only {
   background-image: url("../../sass/assets/images/start-screen-gradient-background.png");
@@ -487,6 +492,11 @@ h2 {
   justify-content: space-between;
   padding-top: 30px;
   padding-bottom: 30px;
+}
+@media (max-width: 768px) {
+  .header {
+    padding: 30px 30px;
+  }
 }
 
 .header__navigation {
@@ -912,7 +922,7 @@ h2 {
   background-image: url("../../sass/assets/icons/icon-phone.svg");
 }
 
-.contact_location {
+.icon_location {
   width: 22px;
   height: 32px;
   background-image: url("../../sass/assets/icons/icon-marker.svg");

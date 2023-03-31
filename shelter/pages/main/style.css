@@ -475,6 +475,11 @@ h2 {
   max-width: 1200px;
   margin: auto;
 }
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0 30px;
+  }
+}
 
 .background-header-not_only {
   background-image: url("../../sass/assets/images/start-screen-gradient-background.png");
@@ -487,6 +492,11 @@ h2 {
   justify-content: space-between;
   padding-top: 30px;
   padding-bottom: 30px;
+}
+@media (max-width: 768px) {
+  .header {
+    padding: 30px 30px;
+  }
 }
 
 .header__navigation {
@@ -540,12 +550,24 @@ h2 {
   justify-content: space-between;
   align-items: end;
 }
+@media (max-width: 768px) {
+  .not_only__block {
+    padding-top: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 .not_only__content {
   width: 460px;
   display: flex;
   flex-direction: column;
   padding-bottom: 243px;
+}
+@media (max-width: 768px) {
+  .not_only__content {
+    padding-bottom: 100px;
+  }
 }
 
 .not_only__title {
@@ -562,6 +584,11 @@ h2 {
   width: 207px;
   text-decoration-line: none;
 }
+@media (max-width: 768px) {
+  .not_only__link {
+    align-self: center;
+  }
+}
 
 .not_only__img {
   width: 698px;
@@ -569,6 +596,13 @@ h2 {
   background-image: url("../../sass/assets/images/start-screen-puppy.png");
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media (max-width: 768px) {
+  .not_only__img {
+    width: 569px;
+    height: 593px;
+    align-self: end;
+  }
 }
 
 .page-about {
@@ -583,6 +617,12 @@ h2 {
   padding-top: 80px;
   padding-bottom: 100px;
 }
+@media (max-width: 768px) {
+  .about__block {
+    flex-direction: column;
+    gap: 80px;
+  }
+}
 
 .about-img {
   width: 300px;
@@ -590,6 +630,11 @@ h2 {
   background-image: url("../../sass/assets/images/about-pets.png");
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media (max-width: 768px) {
+  .about-img {
+    order: 1;
+  }
 }
 
 .about__content {
@@ -1100,7 +1145,7 @@ h2 {
   background-image: url("../../sass/assets/icons/icon-phone.svg");
 }
 
-.contact_location {
+.icon_location {
   width: 22px;
   height: 32px;
   background-image: url("../../sass/assets/icons/icon-marker.svg");
