@@ -566,6 +566,11 @@ h2 {
   align-items: center;
   column-gap: 53px;
 }
+@media (max-width: 768px) {
+  .cards__block {
+    column-gap: 13px;
+  }
+}
 
 .friends__slider {
   display: flex;
@@ -578,6 +583,15 @@ h2 {
 .friends__slider.pets {
   row-gap: 30px;
   column-gap: 40px;
+}
+@media (max-width: 768px) {
+  .friends__slider {
+    flex-wrap: nowrap;
+    column-gap: 40px;
+  }
+  .friends__slider .friend__card:last-child {
+    display: none;
+  }
 }
 
 .friend__card {
@@ -673,36 +687,35 @@ h2 {
 
 .contacts__block {
   display: flex;
-  column-gap: 134px;
+  column-gap: 140px;
   padding-top: 40px;
 }
+@media (max-width: 768px) {
+  .contacts__block {
+    padding-top: 31px;
+    column-gap: 38px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
 
-.questions__block {
-  width: 305px;
+.questions__block, .waiting__block {
+  width: 300px;
   height: 234px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.waiting__block {
-  width: 305px;
-  height: 234px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.questions-title {
+.questions-title, .waiting-title {
   color: #FFFFFF;
   padding-top: 17px;
   padding-bottom: 40px;
 }
-
-.waiting-title {
-  color: #FFFFFF;
-  padding-top: 17px;
-  padding-bottom: 40px;
+@media (max-width: 768px) {
+  .questions-title, .waiting-title {
+    padding-top: 0;
+  }
 }
 
 .questions__content, .waiting__content {
@@ -744,6 +757,12 @@ h2 {
   background-image: url("../../sass/assets/images/footer-puppy.png");
   background-repeat: no-repeat;
   margin-left: 25px;
+}
+@media (max-width: 768px) {
+  .contacts-img {
+    margin-top: 65px;
+    margin-left: 0;
+  }
 }
 
 .logo {
