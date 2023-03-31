@@ -9,11 +9,6 @@
   gap: 120px;
   padding-top: 80px;
   padding-bottom: 100px;
-
-  @include media-tablet {
-    flex-direction: column;
-    gap: 80px;
-  }
 }
 
 .about-img {
@@ -22,10 +17,6 @@
   background-image: url("../../sass/assets/images/about-pets.png");
   background-repeat: no-repeat;
   background-size: cover;
-
-  @include media-tablet {
-    order: 1;
-  }
 }
 
 .about__content {
