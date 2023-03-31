@@ -19,6 +19,10 @@
   justify-content: space-between;
   align-items: center;
   column-gap: 53px;
+
+  @include media-tablet {
+    column-gap: 13px;
+  }
 }
 
 .friends__slider {
@@ -31,6 +35,14 @@
   &.pets{
     row-gap: 30px;
     column-gap: 40px;
+  }
+
+  @include media-tablet {
+    flex-wrap: nowrap;
+    column-gap: 40px;
+    .friend__card:last-child {
+      display: none;
+    }
   }
 }
 
