@@ -3,7 +3,7 @@
   justify-content: right;
   align-items: center;
 
-  @include media-mobile {
+  @include media-tablet {
     display: none;
   }
 }

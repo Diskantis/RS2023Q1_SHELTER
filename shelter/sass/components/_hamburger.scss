@@ -1,0 +1,38 @@
+.hamburger {
+  width: 30px;
+  height: 22px;
+  background: transparent;
+  border: transparent;
+  position: absolute;
+  display: none;
+  z-index: 0;
+
+  @include media-tablet {
+    display: block;
+    top: 50px;
+    right: 20px;
+  }
+}
+
+.hamburger.active {
+  z-index: 2;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: $color-btn-border;
+  &.pets {
+    background: #000000;
+  }
+}
+
+.hamburger span:nth-of-type(2) {
+  top: calc(50% + 0px);
+}
+.hamburger span:nth-of-type(3) {
+  top: calc(50% + 10px);
+}
