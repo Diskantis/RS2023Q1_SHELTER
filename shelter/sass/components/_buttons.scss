@@ -48,6 +48,10 @@
     background-color: $color-btn-bg-hov;
     border-color: $color-btn-bg-hov;
   }
+
+  @include media-mobile {
+    order: 1;
+  }
   &.inactive {
     border-color: $color-nav-text;
     &:hover {

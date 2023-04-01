@@ -443,6 +443,15 @@ h1 {
   font-size: 4.4rem;
   line-height: 5.7rem;
 }
+@media (max-width: 320px) {
+  h1 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 3.2rem;
+    letter-spacing: 0.06em;
+  }
+}
 
 h2 {
   color: #545454;
@@ -451,6 +460,15 @@ h2 {
   font-size: 3.5rem;
   line-height: 4.5rem;
   letter-spacing: 0.06em;
+}
+@media (max-width: 320px) {
+  h2 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 3.2rem;
+    letter-spacing: 0.06em;
+  }
 }
 
 @font-face {
@@ -480,6 +498,11 @@ h2 {
     padding: 0 30px;
   }
 }
+@media (max-width: 320px) {
+  .wrapper {
+    padding: 0 10px;
+  }
+}
 
 .background-header-not_only {
   background-image: url("../../sass/assets/images/start-screen-gradient-background.png");
@@ -498,11 +521,21 @@ h2 {
     padding: 30px 30px;
   }
 }
+@media (max-width: 320px) {
+  .header {
+    padding: 30px 20px;
+  }
+}
 
 .header__navigation {
   display: flex;
   justify-content: right;
   align-items: center;
+}
+@media (max-width: 320px) {
+  .header__navigation {
+    display: none;
+  }
 }
 
 .navigation {
@@ -560,6 +593,11 @@ h2 {
     padding-bottom: 75px;
   }
 }
+@media (max-width: 320px) {
+  .friends__block {
+    padding: 42px 0;
+  }
+}
 
 .friends__title {
   text-align: center;
@@ -574,6 +612,13 @@ h2 {
 @media (max-width: 768px) {
   .cards__block {
     column-gap: 13px;
+  }
+}
+@media (max-width: 320px) {
+  .cards__block {
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 80px;
   }
 }
 
@@ -605,6 +650,13 @@ h2 {
     column-gap: 40px;
     justify-content: left;
     overflow: hidden;
+  }
+}
+@media (max-width: 320px) {
+  .friends__slider {
+    width: 270px;
+    padding-top: 42px;
+    padding-bottom: 20px;
   }
 }
 
@@ -702,6 +754,11 @@ h2 {
 
 .friends__link {
   text-decoration-line: none;
+}
+@media (max-width: 768px) {
+  .friends__link {
+    margin-top: 42px;
+  }
 }
 
 .contacts__block {
@@ -870,6 +927,11 @@ h2 {
   background-color: #FDDCC4;
   border-color: #FDDCC4;
 }
+@media (max-width: 320px) {
+  .btn_slider {
+    order: 1;
+  }
+}
 .btn_slider.inactive {
   border-color: #CDCDCD;
 }
@@ -908,6 +970,12 @@ h2 {
   width: 60px;
   height: 60px;
   background-repeat: no-repeat;
+}
+@media (max-width: 320px) {
+  .ico_help {
+    scale: 0.8333;
+    padding-bottom: 10px;
+  }
 }
 
 .food {

@@ -21,6 +21,11 @@
   width: 60px;
   height: 60px;
   background-repeat: no-repeat;
+
+  @include media-mobile {
+    scale: 0.8333;
+    padding-bottom: 10px;
+  }
 }
 
 .food {

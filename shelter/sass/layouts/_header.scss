@@ -13,4 +13,8 @@
   @include media-tablet {
     padding: 30px 30px;
   }
+
+  @include media-mobile {
+    padding: 30px 20px;
+  }
 }

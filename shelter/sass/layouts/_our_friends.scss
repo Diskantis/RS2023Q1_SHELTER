@@ -12,6 +12,10 @@
   @include media-tablet {
     padding-bottom: 75px;
   }
+
+  @include media-mobile {
+    padding: 42px 0;
+  }
 }
 
 .friends__title {
@@ -26,6 +30,12 @@
 
   @include media-tablet {
     column-gap: 13px;
+  }
+
+  @include media-mobile {
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 80px;
   }
 }
 
@@ -55,6 +65,12 @@
     column-gap: 40px;
     justify-content: left;
     overflow: hidden;
+  }
+
+  @include media-mobile {
+    width: 270px;
+    padding-top: 42px;
+    padding-bottom: 20px;
   }
 }
 
@@ -146,4 +162,8 @@
 
 .friends__link {
   text-decoration-line: none;
+
+  @include media-tablet {
+    margin-top: 42px;
+  }
 }
