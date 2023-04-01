@@ -8,6 +8,10 @@
   align-items: center;
   padding-top: 80px;
   padding-bottom: 100px;
+
+  @include media-tablet {
+    padding-bottom: 75px;
+  }
 }
 
 .friends__title {
@@ -33,16 +37,24 @@
   column-gap: 90px;
   padding: 60px 0;
   &.pets{
+    flex-wrap: wrap;
     row-gap: 30px;
     column-gap: 40px;
+
+    @include media-tablet {
+      height: 1365px;
+      justify-content: left;
+      overflow: hidden;
+      padding: 30px 0;
+    }
   }
 
   @include media-tablet {
+    width: 580px;
     flex-wrap: nowrap;
     column-gap: 40px;
-    .friend__card:last-child {
-      display: none;
-    }
+    justify-content: left;
+    overflow: hidden;
   }
 }
 
@@ -126,6 +138,10 @@
 .slider-manage {
   display: flex;
   column-gap: 20px;
+
+  @include media-tablet {
+    margin-top: 70px;
+  }
 }
 
 .friends__link {

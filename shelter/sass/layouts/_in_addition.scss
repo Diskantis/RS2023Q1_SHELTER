@@ -36,11 +36,6 @@
   row-gap: 20px;
 }
 
-.addition-title {
-  width: 300px;
-  text-align: left;
-}
-
 .addition-bank_name {
   @extend %font-primary;
   @include font ($size: 1.5rem, $height: 1.7rem);

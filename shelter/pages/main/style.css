@@ -571,10 +571,6 @@ h2 {
   }
 }
 
-.not_only__title {
-  width: 310px;
-}
-
 .not_only__text {
   color: #CDCDCD;
   padding-top: 11px;
@@ -646,10 +642,6 @@ h2 {
   justify-content: space-between;
 }
 
-.about__title {
-  width: 370px;
-}
-
 .page-our_friends {
   background-color: #F6F6F6;
 }
@@ -660,6 +652,11 @@ h2 {
   align-items: center;
   padding-top: 80px;
   padding-bottom: 100px;
+}
+@media (max-width: 768px) {
+  .friends__block {
+    padding-bottom: 75px;
+  }
 }
 
 .friends__title {
@@ -687,16 +684,25 @@ h2 {
   padding: 60px 0;
 }
 .friends__slider.pets {
+  flex-wrap: wrap;
   row-gap: 30px;
   column-gap: 40px;
 }
 @media (max-width: 768px) {
+  .friends__slider.pets {
+    height: 1365px;
+    justify-content: left;
+    overflow: hidden;
+    padding: 30px 0;
+  }
+}
+@media (max-width: 768px) {
   .friends__slider {
+    width: 580px;
     flex-wrap: nowrap;
     column-gap: 40px;
-  }
-  .friends__slider .friend__card:last-child {
-    display: none;
+    justify-content: left;
+    overflow: hidden;
   }
 }
 
@@ -786,6 +792,11 @@ h2 {
   display: flex;
   column-gap: 20px;
 }
+@media (max-width: 768px) {
+  .slider-manage {
+    margin-top: 70px;
+  }
+}
 
 .friends__link {
   text-decoration-line: none;
@@ -800,7 +811,6 @@ h2 {
 }
 
 .help__title {
-  width: 310px;
   text-align: center;
   padding-bottom: 60px;
 }
@@ -880,11 +890,6 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
   row-gap: 20px;
-}
-
-.addition-title {
-  width: 300px;
-  text-align: left;
 }
 
 .addition-bank_name {
