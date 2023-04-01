@@ -9,17 +9,39 @@
     justify-content: center;
     flex-wrap: wrap;
   }
+
+  @include media-mobile {
+    padding-top: 30px;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-.questions__block, .waiting__block{
+.questions__block{
   width: 300px;
   height: 234px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @include media-mobile {
+    align-items: center;
+  }
+}
+.waiting__block {
+  width: 300px;
+  height: 234px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include media-mobile {
+    align-items: center;
+    margin-top: 4px;
+  }
 }
 
-.questions-title, .waiting-title{
+.questions-title {
   color: $color-light-text;
   padding-top: 17px;
   padding-bottom: 40px;
@@ -27,37 +49,74 @@
   @include media-tablet {
     padding-top: 0;
   }
-}
 
-.questions__content, .waiting__content {
+  @include media-mobile {
+    text-align: center;
+  }
+}
+.waiting-title {
+  color: $color-light-text;
+  padding-top: 17px;
+  padding-bottom: 32px;
+
+  @include media-tablet {
+    padding-top: 0;
+  }
+
+  @include media-mobile {
+    width: 290px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 8px;
+  }
+}
+.questions__content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @include media-mobile {
+    align-items: center;
+  }
 }
 
-.questions__item {
+.waiting__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include media-mobile {
+    width: 300px;
+    align-items: start;
+  }
+}
+
+.questions__item{
   display: flex;
   align-items: center;
-  padding-left: 60px;
-  margin-bottom: 40px;
   cursor: pointer;
+  text-decoration-line: none;
+  margin-bottom: 40px;
 }
 
 .waiting__item {
   display: flex;
   align-items: center;
-  padding-left: 40px;
-  margin-bottom: 40px;
   cursor: pointer;
+  text-decoration-line: none;
+  margin-bottom: 34px;
+
+  @include media-mobile {
+    margin-bottom: 40px;
+  }
 }
 
 .contact_text {
-  width: 305px;
   color: $color-btn-border;
   @extend %font-primary;
   @include font ($size: 2.0rem, $height: 2.3rem);
   letter-spacing: 0.06em;
-  text-decoration-line: none;
+  padding-left: 20px;
 }
 
 .contacts-img {
@@ -69,6 +128,12 @@
 
   @include media-tablet {
     margin-top: 65px;
+    margin-left: 0;
+  }
+
+  @include media-mobile {
+    scale: 0.86665;
+    margin-top: 17px;
     margin-left: 0;
   }
 }

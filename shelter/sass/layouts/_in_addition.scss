@@ -1,9 +1,5 @@
 .page-in_addition {
   background-color: $color-friends-bg;
-
-  @include media-mobile {
-    display: none;
-  }
 }
 
 .addition__block {
@@ -17,6 +13,12 @@
   @include media-tablet {
     row-gap: 60px;
     flex-direction: column;
+  }
+
+  @include media-mobile {
+    row-gap: 42px;
+    padding-top: 42px;
+    padding-bottom: 42px;
   }
 }
 
@@ -32,7 +34,8 @@
   }
 
   @include media-mobile {
-    display: none;
+    width: 260px;
+    height: 135.2px;
   }
 }
 
@@ -42,12 +45,27 @@
   flex-direction: column;
   justify-content: space-between;
   row-gap: 20px;
+
+  @include media-mobile {
+    width: 280px;
+    align-items: center;
+  }
+}
+.addition-title {
+  @include media-mobile {
+    text-align: center;
+  }
 }
 
 .addition-bank_name {
   @extend %font-primary;
   @include font ($size: 1.5rem, $height: 1.7rem);
   letter-spacing: 0.06em;
+
+  @include media-mobile {
+    @include font ($size: 1.5rem, $height: 2.4rem);
+    letter-spacing: 0;
+  }
 }
 
 .bank-card {
@@ -60,6 +78,10 @@
   padding-left: 5px;
   text-decoration-line: none;
   cursor: pointer;
+
+  @include media-mobile {
+    width: 281px;
+  }
 }
 
 .img-card {
@@ -74,10 +96,19 @@
   @extend %font-primary;
   @include font ($size: 2.0rem, $height: 2.3rem);
   letter-spacing: 0.06em;
+
+  @include media-mobile {
+    @include font ($size: 1.5rem, $height: 1.7rem);
+    letter-spacing: 0.06em;
+  }
 }
 
 .addition-text {
   color: $color-addition-bank;
   @extend %font-secondary;
   @include font ($size: 1.2rem, $height: 1.8rem, $style: italic);
+
+  @include media-mobile {
+    text-align: justify;
+  }
 }
