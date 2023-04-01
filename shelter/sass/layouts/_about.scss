@@ -14,6 +14,13 @@
     flex-direction: column;
     gap: 80px;
   }
+
+  @include media-mobile {
+    align-items: center;
+    gap: 40px;
+    padding-top: 42px;
+    padding-bottom: 43.4px;
+  }
 }
 
 .about-img {
@@ -26,6 +33,11 @@
   @include media-tablet {
     order: 1;
   }
+
+  @include media-mobile {
+    width: 260px;
+    height: 353.61px;
+  }
 }
 
 .about__content {
@@ -34,8 +46,22 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @include media-mobile {
+    width: 300px;
+    height: 495px;
+    align-items: center;
+  }
+}
+.about__title {
+  @include media-mobile {
+    text-align: center;
+  }
 }
 
-.about__title {
-  width: 370px;
+.about__text {
+  @include media-mobile {
+    width: 270px;
+    text-align: justify;
+  }
 }
