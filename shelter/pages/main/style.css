@@ -749,6 +749,16 @@ h2 {
   padding-top: 80px;
   padding-bottom: 100px;
 }
+@media (max-width: 768px) {
+  .friends__block.pets {
+    padding-bottom: 75px;
+  }
+}
+@media (max-width: 320px) {
+  .friends__block.pets {
+    padding-bottom: 44px;
+  }
+}
 @media (max-width: 320px) {
   .friends__block {
     padding: 42px 0;
@@ -797,6 +807,11 @@ h2 {
     justify-content: left;
     overflow: hidden;
     padding: 30px 0;
+  }
+}
+@media (max-width: 320px) {
+  .friends__slider.pets {
+    margin-top: 12px;
   }
 }
 @media (max-width: 768px) {
@@ -905,6 +920,11 @@ h2 {
 @media (max-width: 768px) {
   .slider-manage {
     margin-top: 70px;
+  }
+}
+@media (max-width: 320px) {
+  .slider-manage {
+    column-gap: 10px;
   }
 }
 
