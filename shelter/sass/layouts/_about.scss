@@ -42,15 +42,19 @@
 
 .about__content {
   width: 430px;
-  height: 380px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  row-gap: 24px;
+
+  @include media-desk-tab {
+    width: 100%;
+    align-items: start;
+    padding: 0 138px;
+  }
 
   @include media-mobile {
-    width: 300px;
-    height: 495px;
     align-items: center;
+    padding: 0 15px;
   }
 }
 .about__title {
@@ -61,7 +65,6 @@
 
 .about__text {
   @include media-mobile {
-    width: 270px;
     text-align: justify;
   }
 }
