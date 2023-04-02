@@ -10,7 +10,7 @@
   padding-top: 80px;
   padding-bottom: 100px;
 
-  @include media-tablet {
+  @include media-desk-tab {
     flex-direction: column;
     gap: 80px;
   }
@@ -30,7 +30,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  @include media-tablet {
+  @include media-desk-tab {
     order: 1;
   }
 

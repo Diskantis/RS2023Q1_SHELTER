@@ -28,7 +28,7 @@
   row-gap: 55px;
   column-gap: 120px;
 
-  @include media-tablet {
+  @include media-desk-tab {
     width: 630px;
     column-gap: 60px;
   }
@@ -48,7 +48,7 @@
   justify-content: space-between;
   align-items: center;
 
-  @include media-tablet {
+  @include media-desk-tab {
     width: 170px;
   }
 

@@ -49,7 +49,7 @@
     border-color: $color-btn-bg-hov;
   }
 
-  @include media-mobile {
+  @media (max-width: 420px) {
     order: 1;
   }
   &.inactive {
