@@ -48,6 +48,10 @@
     background-color: $color-btn-bg-hov;
     border-color: $color-btn-bg-hov;
   }
+
+  @media (max-width: 420px) {
+    order: 1;
+  }
   &.inactive {
     border-color: $color-nav-text;
     &:hover {
