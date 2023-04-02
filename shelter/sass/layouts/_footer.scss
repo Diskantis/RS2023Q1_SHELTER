@@ -3,7 +3,7 @@
   column-gap: 140px;
   padding-top: 40px;
 
-  @include media-tablet {
+  @include media-desktop {
     padding-top: 31px;
     column-gap: 38px;
     justify-content: center;
@@ -46,7 +46,7 @@
   padding-top: 17px;
   padding-bottom: 40px;
 
-  @include media-tablet {
+  @include media-desk-tab {
     padding-top: 0;
   }
 
@@ -59,7 +59,7 @@
   padding-top: 17px;
   padding-bottom: 32px;
 
-  @include media-tablet {
+  @include media-desk-tab {
     padding-top: 0;
   }
 
@@ -71,6 +71,7 @@
   }
 }
 .questions__content {
+  width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -81,6 +82,7 @@
 }
 
 .waiting__content {
+  width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -124,16 +126,18 @@
   height: 310px;
   background-image: url("../../sass/assets/images/footer-puppy.png");
   background-repeat: no-repeat;
-  margin-left: 25px;
+  background-size: cover;
+  margin-left: 20px;
 
-  @include media-tablet {
+  @include media-desk-tab {
     margin-top: 65px;
     margin-left: 0;
   }
 
   @include media-mobile {
-    scale: 0.86665;
-    margin-top: 17px;
+    width: 260px;
+    height: 269px;
+    margin-top: 40px;
     margin-left: 0;
   }
 }

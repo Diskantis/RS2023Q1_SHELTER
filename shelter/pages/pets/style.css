@@ -443,7 +443,7 @@ h1 {
   font-size: 4.4rem;
   line-height: 5.7rem;
 }
-@media (max-width: 320px) {
+@media (max-width: 640px) {
   h1 {
     font-style: normal;
     font-weight: 400;
@@ -461,7 +461,7 @@ h2 {
   line-height: 4.5rem;
   letter-spacing: 0.06em;
 }
-@media (max-width: 320px) {
+@media (max-width: 640px) {
   h2 {
     font-style: normal;
     font-weight: 400;
@@ -493,12 +493,17 @@ h2 {
   max-width: 1200px;
   margin: auto;
 }
-@media (max-width: 768px) {
+@media (max-width: 1279px) {
+  .wrapper {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 1175px) {
   .wrapper {
     padding: 0 30px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 640px) {
   .wrapper {
     padding: 0 10px;
   }
@@ -516,12 +521,12 @@ h2 {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1175px) {
   .header {
     padding: 30px 30px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 640px) {
   .header {
     padding: 30px 20px;
   }
@@ -532,7 +537,7 @@ h2 {
   justify-content: right;
   align-items: center;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .header__navigation {
     display: none;
   }
@@ -588,17 +593,17 @@ h2 {
   padding-top: 80px;
   padding-bottom: 100px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1175px) {
   .friends__block.pets {
     padding-bottom: 75px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 640px) {
   .friends__block.pets {
     padding-bottom: 44px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 767px) {
   .friends__block {
     padding: 42px 0;
   }
@@ -614,12 +619,12 @@ h2 {
   align-items: center;
   column-gap: 53px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1279px) {
   .cards__block {
     column-gap: 13px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 420px) {
   .cards__block {
     justify-content: center;
     flex-wrap: wrap;
@@ -640,7 +645,7 @@ h2 {
   row-gap: 30px;
   column-gap: 40px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1175px) {
   .friends__slider.pets {
     height: 1365px;
     justify-content: left;
@@ -648,12 +653,12 @@ h2 {
     padding: 30px 0;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 640px) {
   .friends__slider.pets {
     margin-top: 12px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1279px) {
   .friends__slider {
     width: 580px;
     flex-wrap: nowrap;
@@ -662,9 +667,9 @@ h2 {
     overflow: hidden;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 767px) {
   .friends__slider {
-    width: 270px;
+    max-width: 270px;
     padding-top: 42px;
     padding-bottom: 20px;
   }
@@ -756,12 +761,12 @@ h2 {
   display: flex;
   column-gap: 20px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1175px) {
   .slider-manage {
     margin-top: 70px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 640px) {
   .slider-manage {
     column-gap: 10px;
   }
@@ -770,7 +775,7 @@ h2 {
 .friends__link {
   text-decoration-line: none;
 }
-@media (max-width: 320px) {
+@media (max-width: 640px) {
   .friends__link {
     margin-top: 42px;
   }
@@ -781,7 +786,7 @@ h2 {
   column-gap: 140px;
   padding-top: 40px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1279px) {
   .contacts__block {
     padding-top: 31px;
     column-gap: 38px;
@@ -789,7 +794,7 @@ h2 {
     flex-wrap: wrap;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 640px) {
   .contacts__block {
     padding-top: 30px;
     flex-direction: column;
@@ -804,7 +809,7 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
 }
-@media (max-width: 320px) {
+@media (max-width: 640px) {
   .questions__block {
     align-items: center;
   }
@@ -817,7 +822,7 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
 }
-@media (max-width: 320px) {
+@media (max-width: 640px) {
   .waiting__block {
     align-items: center;
     margin-top: 4px;
@@ -829,12 +834,12 @@ h2 {
   padding-top: 17px;
   padding-bottom: 40px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1175px) {
   .questions-title {
     padding-top: 0;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 640px) {
   .questions-title {
     text-align: center;
   }
@@ -845,12 +850,12 @@ h2 {
   padding-top: 17px;
   padding-bottom: 32px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1175px) {
   .waiting-title {
     padding-top: 0;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 640px) {
   .waiting-title {
     width: 290px;
     text-align: center;
@@ -860,22 +865,24 @@ h2 {
 }
 
 .questions__content {
+  width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-@media (max-width: 320px) {
+@media (max-width: 640px) {
   .questions__content {
     align-items: center;
   }
 }
 
 .waiting__content {
+  width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-@media (max-width: 320px) {
+@media (max-width: 640px) {
   .waiting__content {
     width: 300px;
     align-items: start;
@@ -897,7 +904,7 @@ h2 {
   text-decoration-line: none;
   margin-bottom: 34px;
 }
-@media (max-width: 320px) {
+@media (max-width: 640px) {
   .waiting__item {
     margin-bottom: 40px;
   }
@@ -918,18 +925,20 @@ h2 {
   height: 310px;
   background-image: url("../../sass/assets/images/footer-puppy.png");
   background-repeat: no-repeat;
-  margin-left: 25px;
+  background-size: cover;
+  margin-left: 20px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1175px) {
   .contacts-img {
     margin-top: 65px;
     margin-left: 0;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 640px) {
   .contacts-img {
-    scale: 0.86665;
-    margin-top: 17px;
+    width: 260px;
+    height: 269px;
+    margin-top: 40px;
     margin-left: 0;
   }
 }
@@ -978,7 +987,7 @@ h2 {
   display: none;
   z-index: 0;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .hamburger {
     display: block;
     top: 50px;
@@ -1061,7 +1070,7 @@ h2 {
   background-color: #FDDCC4;
   border-color: #FDDCC4;
 }
-@media (max-width: 320px) {
+@media (max-width: 420px) {
   .btn_slider {
     order: 1;
   }
@@ -1105,7 +1114,7 @@ h2 {
   height: 60px;
   background-repeat: no-repeat;
 }
-@media (max-width: 320px) {
+@media (max-width: 640px) {
   .ico_help {
     scale: 0.8333;
     padding-bottom: 10px;

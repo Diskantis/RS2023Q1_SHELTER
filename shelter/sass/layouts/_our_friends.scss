@@ -9,7 +9,7 @@
   padding-top: 80px;
   padding-bottom: 100px;
   &.pets{
-    @include media-tablet {
+    @include media-desk-tab {
       padding-bottom: 75px;
     }
 
@@ -18,7 +18,7 @@
     }
   }
 
-  @include media-mobile {
+  @include media-tablet {
     padding: 42px 0;
   }
 }
@@ -33,11 +33,11 @@
   align-items: center;
   column-gap: 53px;
 
-  @include media-tablet {
+  @include media-desktop {
     column-gap: 13px;
   }
 
-  @include media-mobile {
+  @media (max-width: 420px) {
     justify-content: center;
     flex-wrap: wrap;
     column-gap: 80px;
@@ -56,7 +56,7 @@
     row-gap: 30px;
     column-gap: 40px;
 
-    @include media-tablet {
+    @include media-desk-tab {
       height: 1365px;
       justify-content: left;
       overflow: hidden;
@@ -68,7 +68,7 @@
     }
   }
 
-  @include media-tablet {
+  @include media-desktop {
     width: 580px;
     flex-wrap: nowrap;
     column-gap: 40px;
@@ -76,8 +76,8 @@
     overflow: hidden;
   }
 
-  @include media-mobile {
-    width: 270px;
+  @include media-tablet {
+    max-width: 270px;
     padding-top: 42px;
     padding-bottom: 20px;
   }
@@ -164,7 +164,7 @@
   display: flex;
   column-gap: 20px;
 
-  @include media-tablet {
+  @include media-desk-tab {
     margin-top: 70px;
   }
 
