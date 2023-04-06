@@ -1,4 +1,4 @@
-.hamburger {
+.hamburger_nav {
   width: 30px;
   height: 22px;
   background: transparent;
@@ -6,19 +6,21 @@
   position: absolute;
   display: none;
   z-index: 0;
+  transition: transform 0.7s ease-in-out;
 
-  @media (max-width: 767px) {
+  @include media-tablet {
     display: block;
     top: 50px;
     right: 20px;
   }
 }
 
-.hamburger.active {
+.hamburger_nav.active {
   z-index: 2;
+  transform: translate(-5%, 0%) rotate(-90deg);
 }
 
-.hamburger span {
+.hamburger_nav span {
   width: 30px;
   height: 2px;
   position: absolute;
@@ -30,9 +32,9 @@
   }
 }
 
-.hamburger span:nth-of-type(2) {
+.hamburger_nav span:nth-of-type(2) {
   top: calc(50% + 0px);
 }
-.hamburger span:nth-of-type(3) {
+.hamburger_nav span:nth-of-type(3) {
   top: calc(50% + 10px);
 }
