@@ -5,6 +5,13 @@
   line-height: $height;
 }
 
+@mixin columns ($width) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  >* { flex-basis: $width; }
+}
+
 @mixin media-desktop {
   @media (max-width: $desktop-width) {@content}
 }
