@@ -1,4 +1,4 @@
-const elements = {
+const elementsMain = {
     hamburgerNav: document.querySelector('.hamburger_nav'),
     menu: document.querySelector('.hamburger-menu'),
     body: document.querySelector('body')
@@ -14,15 +14,16 @@ window.onload = function () {
 // HAMBURGER & MENU
 
 const addHamburgerClickHandler = () => {
-    elements.hamburgerNav.addEventListener('click', e => {
+    elementsMain.hamburgerNav.addEventListener('click', e => {
         e.stopPropagation();
         toggleMenu();
     });
 
     document.addEventListener('click', e => {
         let target = e.target;
-        let its_hamburger = target === elements.hamburgerNav;
-        let menu_is_active = elements.menu.classList.contains('active');
+        console.log(target)
+        let its_hamburger = target === elementsMain.hamburgerNav;
+        let menu_is_active = elementsMain.menu.classList.contains('active');
 
         if (!its_hamburger && menu_is_active) {
             e.stopPropagation();
@@ -32,9 +33,9 @@ const addHamburgerClickHandler = () => {
 }
 
 const toggleMenu = () => {
-    elements.hamburgerNav.classList.toggle('active');
-    elements.menu.classList.toggle('active');
-    elements.body.classList.toggle('fix');
+    elementsMain.hamburgerNav.classList.toggle('active');
+    elementsMain.menu.classList.toggle('active');
+    elementsMain.body.classList.toggle('fix');
 }
 
 
