@@ -16,6 +16,11 @@ body {
   @include font($size: 1.5rem, $height: 2.4rem);
 }
 
+body.fix {
+  overflow: hidden;
+}
+
+
 h1 {
   color: $color-light-text;
   @extend %font-primary;

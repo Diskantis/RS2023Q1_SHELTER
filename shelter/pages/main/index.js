@@ -1,24 +1,45 @@
-console.log("" +
-    "Оценка: 100 баллов.\n" +
-    "\n" +
-    "    Вёрстка страницы Main соответствует макету при ширине экрана 1280px: +14\n" +
-    "    Вёрстка страницы Main соответствует макету при ширине экрана 768px: +14\n" +
-    "    Вёрстка страницы Main соответствует макету при ширине экрана 320px: +14\n" +
-    "    Вёрстка страницы Pets соответствует макету при ширине экрана 1280px: +6\n" +
-    "    Вёрстка страницы Pets соответствует макету при ширине экрана 768px: +6\n" +
-    "    Вёрстка страницы Pets соответствует макету при ширине экрана 320px: +6\n" +
-    "    \n" +
-    "    Ни на одном из разрешений до 320px включительно не появляется \n" +
-    "    горизонтальная полоса прокрутки, справа от отдельных блоков не появляются белые\n" +
-    "    поля. Весь контент страницы при этом сохраняется: не обрезается и не удаляется: +20\n" +
-    "    \n" +
-    "    Верстка резиновая: при плавном изменении размера экрана от 1280px до 320px верстка\n" +
-    "    подстраивается под этот размер, элементы верстки меняют свои размеры и расположение,\n" +
-    "    не наезжают друг на друга, изображения могут менять размер, но сохраняют правильные\n" +
-    "    пропорции: +8\n" +
-    "    \n" +
-    "    При ширине экрана меньше 768px на обеих страницах меню в хедере скрывается,\n" +
-    "    появляется иконка бургер-меню: +4\n" +
-    "    Открытие меню при клике на иконку бургер-меню на текущем этапе не проверяется\n" +
-    "    \n" +
-    "    Верстка обеих страниц валидная: +8\n")
+const elementsMain = {
+    hamburgerNav: document.querySelector('.hamburger_nav'),
+    menu: document.querySelector('.hamburger-menu'),
+    body: document.querySelector('body')
+}
+
+window.onload = function () {
+    console.log('Hello Rolling Scopes!')
+
+    // HAMBURGER & MENU
+    addHamburgerClickHandler();
+}
+
+// HAMBURGER & MENU
+
+const addHamburgerClickHandler = () => {
+    elementsMain.hamburgerNav.addEventListener('click', e => {
+        e.stopPropagation();
+        toggleMenu();
+    });
+
+    document.addEventListener('click', e => {
+        let target = e.target;
+        console.log(target)
+        let its_hamburger = target === elementsMain.hamburgerNav;
+        let menu_is_active = elementsMain.menu.classList.contains('active');
+
+        if (!its_hamburger && menu_is_active) {
+            e.stopPropagation();
+            toggleMenu();
+        }
+    })
+}
+
+const toggleMenu = () => {
+    elementsMain.hamburgerNav.classList.toggle('active');
+    elementsMain.menu.classList.toggle('active');
+    elementsMain.body.classList.toggle('fix');
+}
+
+
+
+
+
+
