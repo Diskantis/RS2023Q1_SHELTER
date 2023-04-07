@@ -12,7 +12,6 @@ window.onload = function () {
 }
 
 // HAMBURGER & MENU
-
 const addHamburgerClickHandler = () => {
     elementsMain.hamburgerNav.addEventListener('click', e => {
         e.stopPropagation();
@@ -38,8 +37,18 @@ const toggleMenu = () => {
     elementsMain.body.classList.toggle('fix');
 }
 
+// SLIDER
+// PAGINATION
+// POPUP
 
 
 
+
+
+
+
+
+// imgJen: document.querySelector('.img_jennifer')
+// elementsMain.imgJen.style.backgroundImage = "url('../../sass/assets/images/pets-katrine.png')";
 
 
