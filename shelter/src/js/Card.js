@@ -20,14 +20,6 @@ export class Card {
         template += `<a class="card__link"><div class="btn btn_card">Learn more</div></a>`
 
         article.innerHTML = template;
-        console.log(article)
         return article;
     }
 }
-
-// if (this.img) {
-//     template += `<div class="card__img"></div>`
-// }
-
-// imgJen: document.querySelector('.img_jennifer')
-// elementsMain.imgJen.style.backgroundImage = "url('../../sass/assets/images/pets-katrine.png')";

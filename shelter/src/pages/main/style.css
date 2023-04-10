@@ -413,8 +413,8 @@ section, main, footer, header, article {
   font-family: "Arial", Arial, sans-serif;
 }
 
-.btn_slider, .btn, .navigation__link a {
-  transition: all 0.3s ease-in;
+.btn_slider, .btn, .navigation__link a, .bg_dark {
+  transition: all 0.5s ease-in;
 }
 
 * {
@@ -544,12 +544,13 @@ h2 {
 }
 @media (max-width: 767px) {
   .header__nav-menu {
-    justify-content: center;
-    align-items: start;
     width: 320px;
     height: 1200px;
+    justify-content: center;
+    align-items: start;
     padding-top: 250px;
     background: #292929;
+    overflow: hidden;
   }
   .header__nav-menu.pets {
     background: #FFFFFF;
@@ -558,27 +559,38 @@ h2 {
 
 @media (max-width: 767px) {
   .hamburger-menu {
-    position: absolute;
+    position: fixed;
     display: flex;
     top: 0;
     right: 0;
-    transform: translateX(-100%);
+    z-index: 2;
+    transform: translateX(100%);
     transition: transform 0.7s ease-in-out;
-  }
-}
-
-@media (max-width: 767px) {
-  .bg_dark {
-    width: 450px;
-    height: 1200px;
-    bottom: 0;
-    right: 320px;
-    background: rgba(41, 41, 41, 0.6);
   }
 }
 
 .hamburger-menu.active {
   transform: translateX(0%);
+}
+
+@media (max-width: 767px) {
+  .bg_dark {
+    width: 100%;
+    height: 1200px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: rgba(41, 41, 41, 0.6);
+    z-index: -1;
+    opacity: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .bg_dark.active {
+    z-index: 0;
+    opacity: 1;
+  }
 }
 
 .navigation {
@@ -845,46 +857,79 @@ h2 {
   }
 }
 
-.friends__slider {
+.slider-wrapper {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  column-gap: 90px;
+  justify-content: center;
+  overflow: hidden;
   padding: 60px 0;
 }
+.slider-wrapper.pets {
+  width: 1200px;
+  padding: 60px 0;
+}
+@media (max-width: 1175px) {
+  .slider-wrapper.pets {
+    width: 580px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+}
+@media (max-width: 640px) {
+  .slider-wrapper.pets {
+    margin-top: 12px;
+  }
+}
+@media (max-width: 1279px) {
+  .slider-wrapper {
+    width: 580px;
+    justify-content: center;
+  }
+}
+@media (max-width: 767px) {
+  .slider-wrapper {
+    max-width: 270px;
+    padding-top: 42px;
+    padding-bottom: 20px;
+  }
+}
+
+.friends__slider {
+  width: 990px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: left;
+  align-items: center;
+  column-gap: 90px;
+}
 .friends__slider.pets {
+  width: 1200px;
   flex-wrap: wrap;
   row-gap: 30px;
   column-gap: 40px;
 }
-@media (max-width: 1175px) {
+@media (max-width: 1279px) {
   .friends__slider.pets {
-    height: 1365px;
-    justify-content: left;
+    width: 890px;
+    height: 900px;
     overflow: hidden;
-    padding: 30px 0;
+    justify-content: center;
   }
 }
-@media (max-width: 640px) {
+@media (max-width: 1175px) {
   .friends__slider.pets {
-    margin-top: 12px;
+    width: 580px;
+    height: 1365px;
   }
 }
 @media (max-width: 1279px) {
   .friends__slider {
     width: 580px;
-    flex-wrap: nowrap;
     column-gap: 40px;
-    justify-content: left;
-    overflow: hidden;
   }
 }
 @media (max-width: 767px) {
   .friends__slider {
     max-width: 270px;
-    padding-top: 42px;
-    padding-bottom: 20px;
   }
 }
 
@@ -914,38 +959,6 @@ h2 {
   border-radius: 9px 9px 0 0;
 }
 
-.img_katrine {
-  background-image: url("../../sass/assets/images/pets-katrine.png");
-}
-
-.img_jennifer {
-  background-image: url("../../sass/assets/images/pets-jennifer.png");
-}
-
-.img_woody {
-  background-image: url("../../sass/assets/images/pets-woody.png");
-}
-
-.img_sophia {
-  background-image: url("../../sass/assets/images/pets-sophia.png");
-}
-
-.img_timmy {
-  background-image: url("../../sass/assets/images/pets-timmy.png");
-}
-
-.img_charly {
-  background-image: url("../../sass/assets/images/pets-charly.png");
-}
-
-.img_scarlett {
-  background-image: url("../../sass/assets/images/pets-scarlett.png");
-}
-
-.img_freddie {
-  background-image: url("../../sass/assets/images/pets-freddie.png");
-}
-
 .card__name {
   font-style: normal;
   font-weight: 400;
@@ -973,11 +986,6 @@ h2 {
 .slider-manage {
   display: flex;
   column-gap: 20px;
-}
-@media (max-width: 1175px) {
-  .slider-manage {
-    margin-top: 70px;
-  }
 }
 @media (max-width: 640px) {
   .slider-manage {
@@ -1419,7 +1427,7 @@ h2 {
   border: transparent;
   position: absolute;
   display: none;
-  z-index: 0;
+  z-index: 5;
   transition: transform 0.7s ease-in-out;
 }
 @media (max-width: 767px) {
@@ -1431,7 +1439,7 @@ h2 {
 }
 
 .hamburger_nav.active {
-  z-index: 2;
+  z-index: 5;
   transform: translate(-5%, 0%) rotate(-90deg);
 }
 

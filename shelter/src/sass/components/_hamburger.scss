@@ -5,7 +5,7 @@
   border: transparent;
   position: absolute;
   display: none;
-  z-index: 0;
+  z-index: 5;
   transition: transform 0.7s ease-in-out;
 
   @include media-tablet {
@@ -16,7 +16,7 @@
 }
 
 .hamburger_nav.active {
-  z-index: 2;
+  z-index: 5;
   transform: translate(-5%, 0%) rotate(-90deg);
 }
 

@@ -1,6 +1,10 @@
+import { Card } from "../../js/Card.js";
+import { data } from "../../js/Pets.js";
+
 const elementsPets = {
     hamburgerNav: document.querySelector('.hamburger_nav'),
     menu: document.querySelector('.hamburger-menu'),
+    bgMenu: document.querySelector('.bg_dark'),
     body: document.querySelector('body')
 }
 
@@ -9,6 +13,9 @@ window.onload = function () {
 
     // HAMBURGER & MENU
     addHamburgerClickHandler();
+
+    // POP-UP
+    renderArticlesToDom();
 }
 
 // HAMBURGER & MENU
@@ -21,7 +28,6 @@ const addHamburgerClickHandler = () => {
 
     document.addEventListener('click', e => {
         let target = e.target;
-        console.log(target)
         let its_hamburger = target === elementsPets.hamburgerNav;
         let menu_is_active = elementsPets.menu.classList.contains('active');
 
@@ -35,5 +41,29 @@ const addHamburgerClickHandler = () => {
 const toggleMenu = () => {
     elementsPets.hamburgerNav.classList.toggle('active');
     elementsPets.menu.classList.toggle('active');
+    elementsPets.bgMenu.classList.toggle('active');
     elementsPets.body.classList.toggle('fix');
+}
+
+
+// POP-UP
+const renderArticlesToDom = () => {
+    const friendsSlider = getFriendsSlider();
+    generateArrCards(data).forEach(card => {
+        friendsSlider.append(card.generateCard())
+    })
+}
+
+const getFriendsSlider = () => {
+    const friendsSliderContainer = document.querySelector('.friends__slider');
+    friendsSliderContainer.innerHTML = '';
+    return friendsSliderContainer;
+}
+
+const generateArrCards = (data) => {
+    let arrCards = [];
+    data.forEach(card => {
+        arrCards.push(new Card(card))
+    })
+    return arrCards;
 }
