@@ -405,16 +405,16 @@ section, main, footer, header, article {
   box-sizing: border-box;
 }
 
-.btn, .logo-name, .contact_text, .text_arr, .card__name, h2, h1 {
+.btn, .logo-name, .contact_text, .number-card, .addition-bank_name, .help-name, .text_arr, .card__name, h2, h1 {
   font-family: "Georgia", Georgia, sans-serif;
 }
 
-.logo-text, .navigation, body {
+.logo-text, .addition-text, .navigation, body {
   font-family: "Arial", Arial, sans-serif;
 }
 
-.btn_slider, .btn, .navigation__link a {
-  transition: all 0.3s ease-in;
+.btn_slider, .btn, .navigation__link a, .bg_dark {
+  transition: all 0.5s ease-in;
 }
 
 * {
@@ -544,12 +544,13 @@ h2 {
 }
 @media (max-width: 767px) {
   .header__nav-menu {
-    justify-content: center;
-    align-items: start;
     width: 320px;
     height: 1200px;
+    justify-content: center;
+    align-items: start;
     padding-top: 250px;
     background: #292929;
+    overflow: hidden;
   }
   .header__nav-menu.pets {
     background: #FFFFFF;
@@ -558,27 +559,38 @@ h2 {
 
 @media (max-width: 767px) {
   .hamburger-menu {
-    position: absolute;
+    position: fixed;
     display: flex;
     top: 0;
     right: 0;
-    transform: translateX(-100%);
+    z-index: 2;
+    transform: translateX(100%);
     transition: transform 0.7s ease-in-out;
-  }
-}
-
-@media (max-width: 767px) {
-  .bg_dark {
-    width: 450px;
-    height: 1200px;
-    bottom: 0;
-    right: 320px;
-    background: rgba(41, 41, 41, 0.6);
   }
 }
 
 .hamburger-menu.active {
   transform: translateX(0%);
+}
+
+@media (max-width: 767px) {
+  .bg_dark {
+    width: 100%;
+    height: 1200px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: rgba(41, 41, 41, 0.6);
+    z-index: -1;
+    opacity: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .bg_dark.active {
+    z-index: 0;
+    opacity: 1;
+  }
 }
 
 .navigation {
@@ -633,6 +645,168 @@ h2 {
   border-bottom: 3px solid #F1CDB3;
 }
 
+.not_only__block {
+  padding-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+@media (max-width: 1175px) {
+  .not_only__block {
+    padding-top: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.not_only__content {
+  width: 460px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 244px;
+}
+@media (max-width: 1175px) {
+  .not_only__content {
+    width: 100%;
+    padding: 2.07px 123px 100px;
+  }
+}
+@media (max-width: 640px) {
+  .not_only__content {
+    align-items: center;
+    padding: 1px 0 105px;
+  }
+}
+
+@media (max-width: 640px) {
+  .not_only__title {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.not_only__text {
+  color: #CDCDCD;
+  padding-top: 11px;
+  padding-bottom: 42px;
+}
+@media (max-width: 640px) {
+  .not_only__text {
+    text-align: center;
+    padding-bottom: 42.24px;
+  }
+}
+
+.not_only__link {
+  width: 207px;
+  text-decoration-line: none;
+}
+@media (max-width: 1175px) {
+  .not_only__link {
+    align-self: center;
+  }
+}
+
+.not_only__img {
+  width: 698px;
+  height: 728px;
+  background-image: url("../../sass/assets/images/start-screen-puppy.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 1175px) {
+  .not_only__img {
+    width: 569px;
+    height: 593px;
+    align-self: end;
+  }
+}
+@media (max-width: 640px) {
+  .not_only__img {
+    width: 260px;
+    height: 271.77px;
+  }
+}
+
+.page-about {
+  background-color: #FFFFFF;
+}
+
+.about__block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+@media (max-width: 1175px) {
+  .about__block {
+    flex-direction: column;
+    gap: 80px;
+  }
+}
+@media (max-width: 640px) {
+  .about__block {
+    align-items: center;
+    gap: 40px;
+    padding-top: 42px;
+    padding-bottom: 43.4px;
+  }
+}
+
+.about-img {
+  width: 300px;
+  height: 408px;
+  background-image: url("../../sass/assets/images/about-pets.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 1175px) {
+  .about-img {
+    order: 1;
+  }
+}
+@media (max-width: 640px) {
+  .about-img {
+    width: 260px;
+    height: 353.61px;
+  }
+}
+
+.about__content {
+  width: 430px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+@media (max-width: 1175px) {
+  .about__content {
+    width: 100%;
+    align-items: start;
+    padding: 0 138px;
+  }
+}
+@media (max-width: 640px) {
+  .about__content {
+    align-items: center;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 640px) {
+  .about__title {
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .about__text {
+    text-align: justify;
+  }
+}
+
 .page-our_friends {
   background-color: #F6F6F6;
 }
@@ -683,46 +857,79 @@ h2 {
   }
 }
 
-.friends__slider {
+.slider-wrapper {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  column-gap: 90px;
+  justify-content: center;
+  overflow: hidden;
   padding: 60px 0;
 }
+.slider-wrapper.pets {
+  width: 1200px;
+  padding: 60px 0;
+}
+@media (max-width: 1175px) {
+  .slider-wrapper.pets {
+    width: 580px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+}
+@media (max-width: 640px) {
+  .slider-wrapper.pets {
+    margin-top: 12px;
+  }
+}
+@media (max-width: 1279px) {
+  .slider-wrapper {
+    width: 580px;
+    justify-content: center;
+  }
+}
+@media (max-width: 767px) {
+  .slider-wrapper {
+    max-width: 270px;
+    padding-top: 42px;
+    padding-bottom: 20px;
+  }
+}
+
+.friends__slider {
+  width: 990px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: left;
+  align-items: center;
+  column-gap: 90px;
+}
 .friends__slider.pets {
+  width: 1200px;
   flex-wrap: wrap;
   row-gap: 30px;
   column-gap: 40px;
 }
-@media (max-width: 1175px) {
+@media (max-width: 1279px) {
   .friends__slider.pets {
-    height: 1365px;
-    justify-content: left;
+    width: 890px;
+    height: 900px;
     overflow: hidden;
-    padding: 30px 0;
+    justify-content: center;
   }
 }
-@media (max-width: 640px) {
+@media (max-width: 1175px) {
   .friends__slider.pets {
-    margin-top: 12px;
+    width: 580px;
+    height: 1365px;
   }
 }
 @media (max-width: 1279px) {
   .friends__slider {
     width: 580px;
-    flex-wrap: nowrap;
     column-gap: 40px;
-    justify-content: left;
-    overflow: hidden;
   }
 }
 @media (max-width: 767px) {
   .friends__slider {
     max-width: 270px;
-    padding-top: 42px;
-    padding-bottom: 20px;
   }
 }
 
@@ -750,38 +957,6 @@ h2 {
   height: 270px;
   background-repeat: no-repeat;
   border-radius: 9px 9px 0 0;
-}
-
-.img_katrine {
-  background-image: url("../../sass/assets/images/pets-katrine.png");
-}
-
-.img_jennifer {
-  background-image: url("../../sass/assets/images/pets-jennifer.png");
-}
-
-.img_woody {
-  background-image: url("../../sass/assets/images/pets-woody.png");
-}
-
-.img_sophia {
-  background-image: url("../../sass/assets/images/pets-sophia.png");
-}
-
-.img_timmy {
-  background-image: url("../../sass/assets/images/pets-timmy.png");
-}
-
-.img_charly {
-  background-image: url("../../sass/assets/images/pets-charly.png");
-}
-
-.img_scarlett {
-  background-image: url("../../sass/assets/images/pets-scarlett.png");
-}
-
-.img_freddie {
-  background-image: url("../../sass/assets/images/pets-freddie.png");
 }
 
 .card__name {
@@ -812,11 +987,6 @@ h2 {
   display: flex;
   column-gap: 20px;
 }
-@media (max-width: 1175px) {
-  .slider-manage {
-    margin-top: 70px;
-  }
-}
 @media (max-width: 640px) {
   .slider-manage {
     column-gap: 10px;
@@ -829,6 +999,227 @@ h2 {
 @media (max-width: 640px) {
   .friends__link {
     margin-top: 42px;
+  }
+}
+
+.help__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+@media (max-width: 640px) {
+  .help__block {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+}
+
+.help__title {
+  text-align: center;
+  padding-bottom: 60px;
+}
+@media (max-width: 640px) {
+  .help__title {
+    padding-bottom: 37px;
+  }
+}
+
+.help__content {
+  width: 1030px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 55px;
+  column-gap: 120px;
+}
+@media (max-width: 1175px) {
+  .help__content {
+    width: 630px;
+    column-gap: 60px;
+  }
+}
+@media (max-width: 640px) {
+  .help__content {
+    width: 290px;
+    justify-content: left;
+    column-gap: 30px;
+    row-gap: 25px;
+  }
+}
+
+.help__card {
+  height: 113px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 1175px) {
+  .help__card {
+    width: 170px;
+  }
+}
+@media (max-width: 640px) {
+  .help__card {
+    width: 130px;
+    height: 92px;
+  }
+}
+
+.help-name {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+@media (max-width: 640px) {
+  .help-name {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+    letter-spacing: 0.06em;
+  }
+}
+
+.page-in_addition {
+  background-color: #F6F6F6;
+}
+
+.addition__block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 32px;
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+@media (max-width: 1175px) {
+  .addition__block {
+    row-gap: 60px;
+    flex-direction: column;
+  }
+}
+@media (max-width: 640px) {
+  .addition__block {
+    row-gap: 42px;
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+}
+
+.addition-img {
+  width: 505px;
+  height: 261px;
+  background-image: url("../../sass/assets/images/donation-dog.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 1175px) {
+  .addition-img {
+    order: 1;
+  }
+}
+@media (max-width: 640px) {
+  .addition-img {
+    width: 260px;
+    height: 135.2px;
+  }
+}
+
+.addition-content {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 20px;
+}
+@media (max-width: 640px) {
+  .addition-content {
+    width: 280px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .addition-title {
+    text-align: center;
+  }
+}
+
+.addition-bank_name {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+  letter-spacing: 0.06em;
+}
+@media (max-width: 640px) {
+  .addition-bank_name {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    letter-spacing: 0;
+  }
+}
+
+.bank-card {
+  width: 349px;
+  background-color: #F1CDB3;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  padding-left: 5px;
+  text-decoration-line: none;
+  cursor: pointer;
+}
+@media (max-width: 640px) {
+  .bank-card {
+    width: 281px;
+  }
+}
+
+.img-card {
+  width: 50px;
+  height: 43px;
+  background-image: url("../../sass/assets/icons/icon-bank-card.svg");
+  background-repeat: no-repeat;
+}
+
+.number-card {
+  color: #545454;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  letter-spacing: 0.06em;
+}
+@media (max-width: 640px) {
+  .number-card {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+    letter-spacing: 0.06em;
+  }
+}
+
+.addition-text {
+  color: #B2B2B2;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+@media (max-width: 640px) {
+  .addition-text {
+    text-align: justify;
   }
 }
 
@@ -1036,7 +1427,7 @@ h2 {
   border: transparent;
   position: absolute;
   display: none;
-  z-index: 0;
+  z-index: 5;
   transition: transform 0.7s ease-in-out;
 }
 @media (max-width: 767px) {
@@ -1048,7 +1439,7 @@ h2 {
 }
 
 .hamburger_nav.active {
-  z-index: 2;
+  z-index: 5;
   transform: translate(-5%, 0%) rotate(-90deg);
 }
 

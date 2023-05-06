@@ -4,12 +4,13 @@
   align-items: center;
 
   @include media-tablet {
-    justify-content: center;
-    align-items: start;
     width: 320px;
     height: 1200px;
+    justify-content: center;
+    align-items: start;
     padding-top: 250px;
     background: $color-hamburger-bg;
+    overflow: hidden;
     &.pets {
       background: #FFFFFF;
     }
@@ -18,28 +19,41 @@
 
 .hamburger-menu {
   @include media-tablet {
-    position: absolute;
+    position: fixed;
     display: flex;
     top: 0;
     right: 0;
-    transform: translateX(-100%);
+    z-index: 2;
+    transform: translateX(100%);
     transition: transform 0.7s ease-in-out;
-  }
-}
-
-.bg_dark {
-  @include media-tablet {
-    width: 450px;
-    height: 1200px;
-    bottom: 0;
-    right: 320px;
-    background: rgba(41, 41, 41, 0.6);
   }
 }
 
 .hamburger-menu.active {
   transform: translateX(0%);
 }
+
+.bg_dark {
+  @extend %transition;
+  @include media-tablet {
+    width: 100%;
+    height: 1200px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: rgba(41, 41, 41, 0.6);
+    z-index: -1;
+    opacity: 0;
+  }
+}
+
+.bg_dark.active {
+  @include media-tablet {
+    z-index: 0;
+    opacity: 1;
+  }
+}
+
 
 .navigation {
   width: 443px;
